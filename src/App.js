@@ -32,7 +32,7 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-     const postLikes = posts.map(post => {
+     const updatedPosts = posts.map(post => {
        if (post.id === postId) {
          return { ...post, likes: post.likes + 1}
        } else {
@@ -40,8 +40,21 @@ const App = () => {
        }
      })
 
-     setPosts(postLikes);
+     setPosts(updatedPosts);
   };
+
+/**
+ * HIGHER ORDER FUNCTIONS
+ * .map -> loop over an array, do something to each element, and return a new array
+ * .filter -> loop over an array, based on a condition, return particular elements into a new array
+ * .reduce -> loop over an array and reduce it to a singular value
+ * .find -> loop over an array, based on a condtiion return the FIRST element it finds that matches that condition
+ */
+
+
+
+
+
 
   return (
     <div className='App'>
